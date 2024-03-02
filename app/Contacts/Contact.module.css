@@ -1,0 +1,110 @@
+.contactContainer {
+    background-image: url('/Contatcts.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    overflow: auto;
+    padding: 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold
+}
+
+.contactHeader, .oderContact {
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: bold
+}
+
+.contactHeader h1 {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold
+}
+
+.contactHeader p , .oderContact p {
+    color: black;
+}
+
+.contactForm {
+    display: grid;
+    grid-gap: 20px;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+}
+
+.inputGroup {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputGroup input[type="text"],
+.inputGroup input[type="email"],
+.inputGroup input[type="tel"] {
+    width: 48%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contactForm select,
+.contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.radioGroup label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.radioGroup input[type="radio"] {
+    margin-right: 10px;
+}
+
+.checkboxContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkboxContainer input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.contactForm button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contactForm button:hover {
+    background-color: #003d82;
+}
+
+.mapContainer img {
+    width: 100%;
+    height: auto; 
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .inputGroup {
+    flex-direction: column;
+    }
+
+    .inputGroup input[type="text"],
+    .inputGroup input[type="email"],
+    .inputGroup input[type="tel"] {
+    width: 100%;
+    }
+}

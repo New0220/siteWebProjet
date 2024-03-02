@@ -1,0 +1,105 @@
+.events {
+    padding: 2rem;
+    background-color: #f7f7f7;
+}
+
+.eventsEnter {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/oneevents.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.eventsSection {
+    margin: 1rem 0;
+}
+
+.eventsIntro {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.eventsIntro h2 {
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+
+.eventsIntro p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.seeAll:hover {
+    color: #0056b3;
+}
+.eventsList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.eventCard {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+}
+
+.eventImage {
+    width: 100%;
+    height: auto; 
+}
+
+.eventInfo {
+    padding: 1rem;
+}
+
+.eventDate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.eventDay {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.eventNumber {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.eventMonth {
+    font-size: 0.85rem;
+}
+
+.viewEvent {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.viewEvent:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .eventsList {
+    grid-template-columns: repeat(1, 1fr);
+    }
+
+    .eventCard {
+    width: 100%; 
+    margin: 0 auto;
+    }
+}
+
