@@ -12,6 +12,10 @@
     font-weight: bold
 }
 
+.erreur {
+    color: #a00;
+}
+
 .contactHeader, .oderContact {
     text-align: center;
     padding-bottom: 20px;
@@ -24,7 +28,7 @@
     font-weight: bold
 }
 
-.contactHeader p , .oderContact p {
+.contactHeader p , .otherContact p {
     color: black;
 }
 
