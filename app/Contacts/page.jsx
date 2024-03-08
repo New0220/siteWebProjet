@@ -52,7 +52,7 @@ const handleSubmit = (event) => {
     if (!lastName || lastName.length < 4) 
     {
     isValid = false
-    setLastNameError('Last name is not')
+    setLastNameError('Last name is not valid')
     } 
     else {
     setLastNameError('')
@@ -118,7 +118,7 @@ return (
         <p>If you have any questions or inquiries, feel free to reach out to us by</p>
         <p>leave a message directly here by filling in this form.</p>
         </div>
-        <form className={style.contactForm} onSubmit={handleSubmit}>
+        <form className={style.contactForm} noValidate onSubmit={handleSubmit}>
         <div className={style.inputGroup}>
             <input type="text" id="first-name" placeholder="First name" value={firstName} onChange={handleFirstName} />
             {firstNameError && <div className={style.error}> {firstNameError} </div> }
@@ -149,7 +149,7 @@ return (
             <span className={style.checkmark}></span>
         </label>
         <button type="submit">Submit</button>
-        {formSubmitted &&  <div> Your message has been successfully sent </div> }
+        {formSubmitted &&  <div className={style.succes}> Your message has been successfully sent </div> }
         <div className={style.otherContact}>
             <p>Email: hello@eventsonline.com</p>
             <p>Phone: +1 (613) 741-7158</p>
