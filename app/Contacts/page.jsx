@@ -8,24 +8,15 @@ const handleFirstName = (event) => setFirstName(event.target.value);
 
 const [lastName, setLastName] = useState('')
 const handleLastName = (event) => setLastName(event.target.value);
-// commentaire 
+
 const [email, setEmail] = useState('')
 const handleEmail = (event) => setEmail(event.target.value);
 
 const [phone, setPhone] = useState('')
 const handlePhone = (event) => setPhone(event.target.value);
 
-const [topic, setTopic] = useState('')
-const handleTopic = (event) => setTopic(event.target.value);
-
-const [queryType, setQueryType] = useState('')
-const handleQueryType = (event) => setQueryType(event.target.value);
-
 const [message, setMessage] = useState('')
 const handleMessage = (event) => setMessage(event.target.value);
-
-const [agree, setAgree] = useState(false)
-const handleAgree = (event) => setAgree(event.target.value);
 
 const [firstNameError, setFirstNameError] = useState('')
 const [lastNameError, setLastNameError] = useState('')
@@ -93,20 +84,14 @@ const handleSubmit = (event) => {
         lastName,
         email,
         phone,
-        topic,
-        queryType,
         message,
-        agree,
     })
 
     setFirstName('')
     setLastName('')
     setEmail('')
     setPhone('')
-    setTopic('')
-    setQueryType('')
     setMessage('')
-    setAgree(false)
     }
 }
 
@@ -131,23 +116,9 @@ return (
             <input type="tel" id="phone" placeholder="Phone number" value={phone} onChange={handlePhone} />
             {phoneError && <div className={style.error}> {phoneError} </div> }
         </div>
-        <select id="topic" value={topic} onChange={handleTopic} >
-            <option value="">Choose a topic</option>
-            <option value="sales">Sales</option>
-            <option value="support">Technical support</option>
-        </select>
-        <div className={style.radioGroup}>
-            <label> <input type="radio" name="query-type" value="general" onChange={handleQueryType} /> General inquiry </label>
-            <label> <input type="radio" name="query-type" value="billing" onChange={handleQueryType} /> Billing question </label>
-            <label> <input type="radio" name="query-type" value="technical" onChange={handleQueryType} /> Technical support </label>
-        </div>
         <textarea id="message" placeholder="Your message" value={message} onChange={handleMessage}> 
         {messageError && <div className={style.error}> {messageError} </div> }
         </textarea>
-        <label className={style.checkboxContainer}> 
-            <input type="checkbox" id="agree" checked={agree} onChange={handleAgree} /> I agree to the Terms
-            <span className={style.checkmark}></span>
-        </label>
         <button type="submit">Submit</button>
         {formSubmitted &&  <div className={style.succes}> Your message has been successfully sent </div> }
         <div className={style.otherContact}>
