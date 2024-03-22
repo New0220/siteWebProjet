@@ -2,14 +2,15 @@
     background-image: url('/Contatcts.jpg');
     background-size: cover;
     background-position: center;
-    width: 100vw;
-    min-height: 100vh;
+    width: 100%;
+    min-height: 100%;
     position: relative;
     overflow: auto;
     padding: 20px;
     color: white;
     font-size: 16px;
-    font-weight: bold
+    font-weight: bold;
+    overflow: hidden;
 }
 
 .error {
@@ -20,7 +21,7 @@
     color : green;
 }
 
-.contactHeader, .oderContact {
+.contactHeader, .otherContact {
     text-align: center;
     padding-bottom: 20px;
     font-weight: bold
@@ -33,7 +34,7 @@
 }
 
 .contactHeader p , .otherContact p {
-    color: black;
+    color: white;
 }
 
 .contactForm {
@@ -66,25 +67,6 @@
     border-radius: 4px;
 }
 
-.radioGroup label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.radioGroup input[type="radio"] {
-    margin-right: 10px;
-}
-
-.checkboxContainer {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.checkboxContainer input[type="checkbox"] {
-    margin-right: 10px;
-}
-
 .contactForm button {
     background-color: #0056b3;
     color: white;
@@ -100,9 +82,9 @@
 }
 
 .mapContainer img {
-    width: 100%;
+    width: auto;
     height: auto; 
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 @media (max-width: 768px) {

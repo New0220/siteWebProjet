@@ -2,6 +2,21 @@ import style from "@/app/Conferences/ConferensEvent.module.css"
 import Image from "next/image"
 import UiConference from "@/public/UiConference.jpg"
 
+/**
+ * @type { import { "next" }.Metadata }
+ * @returns 
+ */
+
+export const metadata = {
+    title: 'Conferences',
+    description: 'Decouvrez la conference sur Intelligence Artificiel: Révolution et Perspective',
+    openGraph: {
+        title: 'Conference sur Intelligence Artificiel: Révolution et Perspective',
+        description: 'Découvrez la conference annuelle sur Intelligence Artificiel: Révolution et Perspective aura lieu au cœur de La Cité Collégiale le 09 et 10 Fevrier 2024',
+        images: ['/logo.png']
+    }
+}
+
 export default function ConferensEvent() {
     return <> 
         <section className={style.entete}>

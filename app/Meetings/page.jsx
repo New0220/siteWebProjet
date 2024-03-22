@@ -1,5 +1,20 @@
 import style from "@/app/Meetings/MeetingEvent.module.css"
 
+/**
+ * @type { import { "next" }.Metadata }
+ * @returns 
+ */
+
+export const metadata = {
+    title: 'Meeting',
+    description: 'Decouvrez le Meeting Entrepreneuriat et Innovation : Créer le Futur',
+    openGraph: {
+        title: 'Meeting sur Entrepreneuriat et Innovation : Créer le Futur',
+        description: 'Découvrez Le sommet annuel sur l entrepreneuriat et l innovation, intitulé  Entrepreneuriat et Innovation : Créer le Futur qui se déroulera les 15 et 16 Mars 2024',
+        images: ['/logo.png']
+    }
+}
+
 export default function MeetingEvent() {
 return (
     <>

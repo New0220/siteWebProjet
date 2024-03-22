@@ -2,6 +2,20 @@
 import { useState } from 'react'
 import style from '@/app/Contacts/Contact.module.css'
 
+/**
+ * @type {import ("next").Metadata}
+ */
+
+export const metadata = {
+    title: 'Formulaire de Contact',
+    description: 'Forlulaire de prise de contact avec les utilisateur',
+    openGraph: {
+        title: 'Contact',
+        description: 'Contactez nous directement via ce formulaire',
+        images: ['/logo.png']
+    }
+}
+
 export default function Contact() {
 const [firstName, setFirstName] = useState('')
 const handleFirstName = (event) => setFirstName(event.target.value);
@@ -31,7 +45,7 @@ const handleSubmit = (event) => {
 
     let isValid = true
 
-    if (!firstName || firstName.length < 4) 
+    if (!firstName || firstName.length < 3) 
     {
     isValid = false
     setFirstNameError('First name is not valid')
@@ -40,7 +54,7 @@ const handleSubmit = (event) => {
     setFirstNameError('')
     }
 
-    if (!lastName || lastName.length < 4) 
+    if (!lastName || lastName.length < 3) 
     {
     isValid = false
     setLastNameError('Last name is not valid')
@@ -99,35 +113,40 @@ return (
     <div>
     <div className={style.contactContainer}>
         <div className={style.contactHeader}>
-        <h1>Get in touch</h1>
-        <p>If you have any questions or inquiries, feel free to reach out to us by</p>
-        <p>leave a message directly here by filling in this form.</p>
+            <h1>Get in touch</h1>
+            <p>If you have any questions or inquiries, feel free to reach out to us by</p>
+            <p>leave a message directly here by filling in this form.</p>
         </div>
         <form className={style.contactForm} noValidate onSubmit={handleSubmit}>
-        <div className={style.inputGroup}>
-            <input type="text" id="first-name" placeholder="First name" value={firstName} onChange={handleFirstName} />
-            {firstNameError && <div className={style.error}> {firstNameError} </div> }
-            <input type="text" id="last-name" placeholder="Last name" value={lastName} onChange={handleLastName} />
-            {lastNameError && <div className={style.error}> {lastNameError} </div> }
-        </div>
-        <div className={style.inputGroup}>
-            <input type="email" id="email" placeholder="Email" value={email} onChange={handleEmail} />
-            {emailError && <div className={style.error}> {emailError} </div> }
-            <input type="tel" id="phone" placeholder="Phone number" value={phone} onChange={handlePhone} />
-            {phoneError && <div className={style.error}> {phoneError} </div> }
-        </div>
-        <textarea id="message" placeholder="Your message" value={message} onChange={handleMessage}> 
-        {messageError && <div className={style.error}> {messageError} </div> }
-        </textarea>
-        <button type="submit">Submit</button>
-        {formSubmitted &&  <div className={style.succes}> Your message has been successfully sent </div> }
-        <div className={style.otherContact}>
-            <p>Email: hello@eventsonline.com</p>
-            <p>Phone: +1 (613) 741-7158</p>
-            <p>Office: 400 Den Haag Dr, Ottawa ON K1K 4W8</p>
-        </div>
+            <div className={style.inputGroup}>
+                <input type="text" id="first-name" placeholder="First name" value={firstName} onChange={handleFirstName} />
+                <div className={style.error}>{firstNameError}</div>
+            </div>
+            <div className={style.inputGroup}>
+                <input type="text" id="last-name" placeholder="Last name" value={lastName} onChange={handleLastName} />
+                <div className={style.error}>{lastNameError}</div>
+            </div>
+            <div className={style.inputGroup}>
+                <input type="email" id="email" placeholder="Email" value={email} onChange={handleEmail} />
+                <div className={style.error}>{emailError}</div>
+            </div>
+            <div className={style.inputGroup}>
+                <input type="tel" id="phone" placeholder="Phone number" value={phone} onChange={handlePhone} />
+                <div className={style.error}>{phoneError}</div>
+            </div>
+            <div>
+                <textarea id="message" placeholder="Your message" value={message} onChange={handleMessage}> </textarea>
+                <div className={style.error}>{messageError}</div>
+            </div>
+                <button type="submit">Submit</button>
+                {formSubmitted && <div className={style.succes}> Your message has been successfully sent </div>}
+            <div className={style.otherContact}>
+                <p>Email: hello@eventsonline.com</p>
+                <p>Phone: +1 (613) 741-7158</p>
+                <p>Office: 400 Den Haag Dr, Ottawa ON K1K 4W8</p>
+            </div>
         </form>
     </div>
-    </div>
+</div>
 )
 }

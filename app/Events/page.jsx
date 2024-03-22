@@ -4,6 +4,21 @@ import Conference from "@/public/Conference.jpg"
 import Meeting from "@/public/Meeting.jpg"
 import Link from 'next/link'
 
+/**
+ * @type { import { "next" }.Metadata }
+ * @returns 
+ */
+
+export const metadata = {
+    title: 'Events',
+    description: 'Liste d evenements locale',
+    openGraph: {
+        title: 'Events',
+        description: 'Découvrez une multitude d evenement pas loin de vous',
+        images: ['/logo.png']
+    }
+}
+
 export default function Events() {
     return <>
 <div className={style.events}>

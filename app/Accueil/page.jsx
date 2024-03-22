@@ -1,10 +1,25 @@
-import Corps from "@/components/Corps";
+import Corps from "@/components/Corps"
 import Image from "next/image"
 import concert from "@/public/concert.jpg"
 import festival from "@/public/festival.jpg"
 import Godlive from "@/public/Godlive.jpg"
 import MackArture from "@/public/MackArture.jpg"
 import style from "@/app/Accueil/Corps.module.css"
+
+/**
+ * @type { import { "next" }.Metadata }
+ * @returns 
+ */
+
+export const metadata = {
+    title: 'Accueil',
+    description: 'Agenda local dévénements',
+    openGraph: {
+        title: 'Agenda local d événements',
+        description: 'Découvrez et explorez les événements locaux avec facilité grâce à notre plateforme centralisée. Personnalisez vos préférences et trouvez des événements en fonction de vos intérêts, de votre localisation et du type d événements que vous aimez.',
+        images: ['/logo.png']
+    }
+}
 
 export default function Accueil() {
 return <div>
