@@ -12,7 +12,7 @@ export default function Footer() {
             </Link>
         </div>
         <div>
-            <span> &copy; GODLIVE NJAKAM | Collège la Cité </span>
+            <span> &copy; MACK-ARTHUR SIALET & GODLIVE NJAKAM | Collège la Cité </span>
         </div>
     </div>
     </footer>
