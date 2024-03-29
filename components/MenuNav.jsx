@@ -8,14 +8,14 @@ export default function MenuNav() {
     const pathname = usePathname
     return <nav className={styles.nav}>
         <div className={styles.title}>
-            <Link href={'/Accueil'}>
+            <Link href={'/'}>
             <Image src={logo} alt="Logo React"/>
             </Link>
         </div>
         <div className={styles.navLinks}>
             <ul>
                 <li>
-                    <Link href="/Accueil" className={pathname === '/Accueil' ? styles.active: ''}> 
+                    <Link href="/" className={pathname === '/' ? styles.active: ''}> 
                         Accueil 
                     </Link>
                 </li>

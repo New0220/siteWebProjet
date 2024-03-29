@@ -7,7 +7,7 @@ export default function Footer() {
     return <footer className={styles.footer}>
     <div>
         <div>
-            <Link href="Accueil">
+            <Link href="/">
             <Image src={logo} alt="Logo"/>
             </Link>
         </div>

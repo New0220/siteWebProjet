@@ -39,9 +39,9 @@
 
 .contactForm {
     display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 600px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 600px;
 }
 
 .inputGroup {

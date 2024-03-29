@@ -4,7 +4,7 @@ import concert from "@/public/concert.jpg"
 import festival from "@/public/festival.jpg"
 import Godlive from "@/public/Godlive.jpg"
 import MackArture from "@/public/MackArture.jpg"
-import style from "@/app/Accueil/Corps.module.css"
+import style from "@/app/Corps.module.css"
 
 /**
  * @type { import { "next" }.Metadata }
